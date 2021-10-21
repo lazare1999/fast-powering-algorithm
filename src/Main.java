@@ -21,7 +21,7 @@ public class Main
         System.out.print("Enter mod : ");
         int mod = Integer.parseInt(myObj.nextLine());
 
-        System.out.print("answer is: " + fastPoweringAlgorithm(g, A, mod) + " (mod " + mod + ")");
+        System.out.print("answer is: " + fastPoweringAlgorithm(g, A,  mod) + " (mod " + mod + ")");
 
     }
 
@@ -29,12 +29,12 @@ public class Main
         return str.chars().mapToObj(e -> (char)e).collect(Collectors.toList());
     }
 
-    private static int fastPoweringAlgorithm(int g, int A, int mod) {
-        List<Character> reversedA = convertStringToCharList(Integer.toBinaryString(A));
-        List<Integer> aList = new ArrayList<>();
+    private static long fastPoweringAlgorithm(long g, long A, long mod) {
+        List<Character> reversedA = convertStringToCharList(Long.toBinaryString(A));
+        List<Long> aList = new ArrayList<>();
         aList.add(g);
 
-        var ans = 1;
+        var ans = 1L;
         var index = 1;
         for(int i = 0; i < reversedA.size(); i++) {
 
