@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="fast_powering_algorithm:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/fast_powering_algorithm_jar</output-path>
+    <root id="archive" name="fast_powering_algorithm.jar">
+      <element id="module-output" name="fast_powering_algorithm" />
+    </root>
+  </artifact>
+</component>
