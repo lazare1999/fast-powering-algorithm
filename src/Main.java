@@ -22,6 +22,7 @@ public class Main
         int mod = Integer.parseInt(myObj.nextLine());
 
         System.out.print("answer is: " + fastPoweringAlgorithm(g, A, mod) + " (mod " + mod + ")");
+
     }
 
     private static List<Character> convertStringToCharList(String str) {
@@ -33,14 +34,12 @@ public class Main
         List<Integer> aList = new ArrayList<>();
         aList.add(g);
 
-        for(int i = 0; i < reversedA.size() -1; i++) {
-            aList.add((aList.get(i) * aList.get(i)) % mod);
-        }
-
-
         var ans = 1;
         var index = 1;
         for(int i = 0; i < reversedA.size(); i++) {
+
+            if (i < reversedA.size()-1)
+                aList.add((aList.get(i) * aList.get(i)) % mod);
 
             index = reversedA.size() - (i +1);
             if (Integer.parseInt(String.valueOf(reversedA.get(index))) == 0)
